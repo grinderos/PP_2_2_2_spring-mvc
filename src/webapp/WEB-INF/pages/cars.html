@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+</head>
+<body>
+<div>
+    <table border="1" width="350">
+        <caption><h3>List of cars</h3></caption>
+        <thead>
+        <tr>
+            <th> carmaker </th>
+            <th> model </th>
+            <th> series </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="car, iterStat : ${cars}">
+            <td th:text="${car.carmaker}"></td>
+            <td th:text="${car.model}"></td>
+            <td th:text="${car.series}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<br>
+<a href="/cars">http://localhost:8080/cars</a>
+<br>
+<a href="/cars?count=1">http://localhost:8080/cars?count=1</a>
+<br>
+<a href="/cars?count=3">http://localhost:8080/cars?count=3</a>
+<br>
+<a href="/cars?count=5">http://localhost:8080/cars?count=5</a>
+<br>
+
+
+</body>
+</html>
